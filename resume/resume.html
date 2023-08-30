@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>resume</title>
+
+    <style>
+        body {
+            margin: 0;
+        } 
+  
+        .img {
+            justify-content: center;
+        }
+  
+        hr{width: 100%;}
+
+        #porfile-img {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #2B3856;
+            transform: scale(1.2);
+            border-radius: 40%
+        } 
+  
+        .menu-bar {
+            position: fixed;
+            border: 0;
+            background-color: beige;
+            display: block;
+            width: 200px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+  
+        .index {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        
+
+        .section input[id*="slide"] {display:none;}
+	    .section .slidewrap { position:fixed; width:97%; height:100%; top:0; left: 200px; background:url(./img/back.png);}
+	    .section .slidelist {white-space:nowrap; font-size:0; overflow:hidden; position:relative;}
+	    .section .slidelist > li {display:inline-block; vertical-align:middle; width:100%; transition:all .4s;}
+	    .section .slidelist > li > a {display:block; position:relative;}
+	    .section .slidelist > li > a img {width:100%;}
+	    .section .slidelist label {position:absolute; z-index:10; top:50%; transform:translateY(-50%); padding:50px; cursor:pointer;}
+	    .section .slidelist .textbox {position:absolute; z-index:1; top:50%; left:50%; transform:translate(-50%,-50%); line-height:1.6; text-align:center;}
+	    .section .slidelist .textbox h3 {font-size:36px;color:#fff; transform:translateY(30px); transition:all .4s;}
+        .section .slidelist .textbox p {font-size:15px;color:#fff; transform:translateY(30px); transition:all .4s;}
+
+        .section input[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+	    .section input[id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+	    .section input[id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+
+        .section input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .textbox h3 {opacity:1; transform:translateY(0); transition-delay:.2s;}
+	    .section input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .textbox p {opacity:1; transform:translateY(0); transition-delay:.4s;}
+	    .section input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .textbox h3 {opacity:1; transform:translateY(0); transition-delay:.2s;}
+	    .section input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .textbox p {opacity:1; transform:translateY(0); transition-delay:.4s;}
+	    .section input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .textbox h3 {opacity:1; transform:translateY(0); transition-delay:.2s;}
+	    .section input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .textbox p {opacity:1; transform:translateY(0); transition-delay:.4s;}
+
+        .slide-control > div {display:none;}
+	    .section .left {left:30px;background:url('./img/left.png') center center / 100% no-repeat;}
+	    .section .right {right:30px;background:url('./img/right.png') center center / 100% no-repeat;}
+	    .section input[id="slide01"]:checked ~ .slidewrap .slide-control > div:nth-child(1) {display:block;}
+	    .section input[id="slide02"]:checked ~ .slidewrap .slide-control > div:nth-child(2) {display:block;}
+	    .section input[id="slide03"]:checked ~ .slidewrap .slide-control > div:nth-child(3) {display:block;}
+
+    </style>
+
+</head>
+<body>
+
+    <header></header>
+    <div class="menu-bar">
+        <div class="index">
+          <div class="img">
+            <img id="porfile-img" src="img/123123.jpg">
+          </div>
+          <br>
+          <hr>
+          <h3>KIM MIN SUK</h3>
+          <h3>1993.09.07</h3>
+          <h3>+(82)10-6496-4195</h3>
+          <h3>aforo@kakao.com</h3>
+        </div>
+    </div>
+
+    <div class="section">
+        <input type="radio" name="slide" id="slide01" checked>
+        <input type="radio" name="slide" id="slide02">
+        <input type="radio" name="slide" id="slide03">
+        <div class="slidewrap">
+            
+            <ul class="slidelist">
+                <li class="slideitem">
+                    <a>
+                        <div class="textbox">
+                            <h3>안녕하세요! 저는 IT쪽에 연관이 없는 직종에만 근무 했었습니다.</h3>
+                            <h3>개발자라는 직업이 처음이라 아직 모든게 새롭고 낯설게 느껴집니다.</h3>
+                            <h3>프론트개발자가 매력있게 느껴졌고 직관적인게 마음에 들어 입문하게 되었습니다.</h3>
+                            <h3>풀스택 개발자를 목표로 하고 있습니다!</h3>
+
+                    
+                        </div>
+                        <img src="./img/back.png">
+                    </a>
+                </li>
+                <li class="slideitem">
+                    <a>
+                        
+                        <div class="textbox">
+                            <h3>경찰행정학 전공</h3>
+                            <h3>인테리어 기사 - 현장관리자 </h3>
+                            <h3>건강기능식품 MD - 방솜심의/편성, 거래처 관리, 영업</h3>
+                            <h3>제조업 - 거래처 관리, 영업</h3>
+                        </div>
+                        <img src="./img/back.png">
+                    </a>
+                </li>
+                <li class="slideitem">
+                    <a>
+                        
+                        <div class="textbox">
+                            <h3>질문이 있으시다면 해주세요!</h3>
+                            <p>없으셔도 감사합니다...</p>
+                        </div>
+                        <img src="./img/back.png">
+                    </a>
+                </li class="slideitem">
+    
+                <div class="slide-control">
+                    <div>
+                        <label for="slide03" class="left"></label>
+                        <label for="slide02" class="right"></label>
+                    </div>
+                    <div>
+                        <label for="slide01" class="left"></label>
+                        <label for="slide03" class="right"></label>
+                    </div>
+                    <div>
+                        <label for="slide02" class="left"></label>
+                        <label for="slide01" class="right"></label>
+                    </div>
+                </div>
+    
+            </ul>
+        </div>
+    </div>    
+
+</body>
+</html>
